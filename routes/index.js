@@ -3,14 +3,9 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index');
 });
 
-//menu page
-//contacts page
-//sales page
-//work page
-//TODO: add these pages
 
 var booking_controller = require('../controllers/bookingController')
 
