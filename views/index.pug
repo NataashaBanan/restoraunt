@@ -22,29 +22,29 @@ section.content_on_image
         label#booking_delete_label(for='booking_delete') &Ocy;&tcy;&mcy;&iecy;&ncy;&icy;&tcy;&softcy;
       form#booking_create_form.form(method='POST' action='/booking/create')
         label(for='name_input_create') &Icy;&mcy;&yacy;
-        input#name_input_create.input(type='text' placeholder='Иван')
+        input#name_input_create.input(type='text' placeholder='Иван' name='name')
         label(for='family_name_input_create') &Fcy;&acy;&mcy;&icy;&lcy;&icy;&yacy;
-        input#family_name_input_create.input(type='text' placeholder='Иванов')
+        input#family_name_input_create.input(type='text' placeholder='Иванов' name='family_name')
         label(for='number_input_create') &Ncy;&ocy;&mcy;&iecy;&rcy; &tcy;&iecy;&lcy;&iecy;&fcy;&ocy;&ncy;&acy;
-        input#number_input_create.input(type='tel' placeholder='+7-800-000-00-00')
+        input#number_input_create.input(type='tel' placeholder='+7-800-000-00-00' name='tel')
         label(for='date_input_create') &Dcy;&acy;&tcy;&acy;
-        input#date_input_create.input(type='date')
+        input#date_input_create.input(type='date' name='date')
         input.submit_input(type='submit' value='Подтвердить')
-      form#booking_check_form.form(method='GET' action='/booking')
+      form#booking_check_form.form(method='POST' action='/booking')
         label(for='name_input_check') &Icy;&mcy;&yacy;
-        input#name_input_check.input(type='text' placeholder='Иван')
+        input#name_input_check.input(type='text' placeholder='Иван' name='name' required='true')
         label(for='family_name_input_check') &Fcy;&acy;&mcy;&icy;&lcy;&icy;&yacy;
-        input#family_name_input_check.input(type='text' placeholder='Иванов')
+        input#family_name_input_check.input(type='text' placeholder='Иванов' name='family_name' required='true')
         label(for='number_input_check') &Ncy;&ocy;&mcy;&iecy;&rcy; &tcy;&iecy;&lcy;&iecy;&fcy;&ocy;&ncy;&acy;
-        input#number_input_check.input(type='tel' placeholder='+7-800-000-00-00')
+        input#number_input_check.input(type='tel' placeholder='+7-800-000-00-00' name='tel' required='true')
         input.submit_input(type='submit' value='Проверка')
       form#booking_delete_form.form(method='POST', action='/booking/delete')
         label(for='name_input_delete') &Icy;&mcy;&yacy;
-        input#name_input_delete.input(type='text' placeholder='Иван')
+        input#name_input_delete.input(type='text' placeholder='Иван' name='name')
         label(for='family_name_input_delete') &Fcy;&acy;&mcy;&icy;&lcy;&icy;&yacy;
-        input#family_name_input_delete.input(type='text' placeholder='Иванов')
+        input#family_name_input_delete.input(type='text' placeholder='Иванов' name='family_name')
         label(for='number_input_delete') &Ncy;&ocy;&mcy;&iecy;&rcy; &tcy;&iecy;&lcy;&iecy;&fcy;&ocy;&ncy;&acy;
-        input#number_input_delete.input(type='tel' placeholder='+7-800-000-00-00')
+        input#number_input_delete.input(type='tel' placeholder='+7-800-000-00-00' name='tel')
         input.submit_input(type='submit' value='Удалить')
     aside.sales
       | &Acy;&kcy;&tscy;&icy;&yacy; &scy;&tcy;&ucy;&dcy;&iecy;&ncy;&chcy;&iecy;&scy;&kcy;&acy;&yacy; &scy;&rcy;&iecy;&dcy;&acy;

@@ -15,7 +15,7 @@ router.post('/booking/create', booking_controller.booking_create_post);
 //POST request for deleting booking
 router.post('/booking/delete', booking_controller.booking_delete_post);
 
-//GET request for one booking
-router.get('/booking', booking_controller.booking_detail);
+//POST request for one booking
+router.post('/booking', booking_controller.booking_detail);
 
 module.exports = router;
