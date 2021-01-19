@@ -7,10 +7,10 @@ section.content_on_image
   header
     aside logo
     main.menu
-      a(href='./menu') &Mcy;&iecy;&ncy;&yucy;
-      a(href='./contacts') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
-      a(href='./sales') &Acy;&kcy;&tscy;&icy;&icy;
-      a(href='./work') &Rcy;&acy;&bcy;&ocy;&tcy;&acy;
+      a(href='/menu') &Mcy;&iecy;&ncy;&yucy;
+      a(href='/contacts') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
+      a(href='/sales') &Acy;&kcy;&tscy;&icy;&icy;
+      a(href='/work') &Rcy;&acy;&bcy;&ocy;&tcy;&acy;
   .under_header
     main.all_forms
       input#booking_create.form_radio_input(type='radio' name='booking_type' checked='')
@@ -20,36 +20,36 @@ section.content_on_image
         label#booking_create_label(for='booking_create') &Zcy;&acy;&bcy;&rcy;&ocy;&ncy;&icy;&rcy;&ocy;&vcy;&acy;&tcy;&softcy;
         label#booking_check_label(for='booking_check') &Pcy;&rcy;&ocy;&vcy;&iecy;&rcy;&icy;&tcy;&softcy; &bcy;&rcy;&ocy;&ncy;&softcy;
         label#booking_delete_label(for='booking_delete') &Ocy;&tcy;&mcy;&iecy;&ncy;&icy;&tcy;&softcy;
-      #booking_create_form.form
+      form#booking_create_form.form(method='POST' action='/booking/create')
         label(for='name_input_create') &Icy;&mcy;&yacy;
-        input#name_input_create(type='text' placeholder='Иван')
+        input#name_input_create.input(type='text' placeholder='Иван')
         label(for='family_name_input_create') &Fcy;&acy;&mcy;&icy;&lcy;&icy;&yacy;
-        input#family_name_input_create(type='text' placeholder='Иванов')
+        input#family_name_input_create.input(type='text' placeholder='Иванов')
         label(for='number_input_create') &Ncy;&ocy;&mcy;&iecy;&rcy; &tcy;&iecy;&lcy;&iecy;&fcy;&ocy;&ncy;&acy;
-        input#number_input_create(type='tel' placeholder='+7-800-000-00-00')
+        input#number_input_create.input(type='tel' placeholder='+7-800-000-00-00')
         label(for='date_input_create') &Dcy;&acy;&tcy;&acy;
-        input#date_input_create(type='date')
-        button &Pcy;&ocy;&dcy;&tcy;&vcy;&iecy;&rcy;&dcy;&icy;&tcy;&softcy;
-      #booking_check_form.form
+        input#date_input_create.input(type='date')
+        input.submit_input(type='submit' value='Подтвердить')
+      form#booking_check_form.form(method='GET' action='/booking')
         label(for='name_input_check') &Icy;&mcy;&yacy;
-        input#name_input_check(type='text' placeholder='Иван')
+        input#name_input_check.input(type='text' placeholder='Иван')
         label(for='family_name_input_check') &Fcy;&acy;&mcy;&icy;&lcy;&icy;&yacy;
-        input#family_name_input_check(type='text' placeholder='Иванов')
+        input#family_name_input_check.input(type='text' placeholder='Иванов')
         label(for='number_input_check') &Ncy;&ocy;&mcy;&iecy;&rcy; &tcy;&iecy;&lcy;&iecy;&fcy;&ocy;&ncy;&acy;
-        input#number_input_check(type='tel' placeholder='+7-800-000-00-00')
-        button &Pcy;&rcy;&ocy;&vcy;&iecy;&rcy;&kcy;&acy;
-      #booking_delete_form.form
+        input#number_input_check.input(type='tel' placeholder='+7-800-000-00-00')
+        input.submit_input(type='submit' value='Проверка')
+      form#booking_delete_form.form(method='POST', action='/booking/delete')
         label(for='name_input_delete') &Icy;&mcy;&yacy;
-        input#name_input_delete(type='text' placeholder='Иван')
+        input#name_input_delete.input(type='text' placeholder='Иван')
         label(for='family_name_input_delete') &Fcy;&acy;&mcy;&icy;&lcy;&icy;&yacy;
-        input#family_name_input_delete(type='text' placeholder='Иванов')
+        input#family_name_input_delete.input(type='text' placeholder='Иванов')
         label(for='number_input_delete') &Ncy;&ocy;&mcy;&iecy;&rcy; &tcy;&iecy;&lcy;&iecy;&fcy;&ocy;&ncy;&acy;
-        input#number_input_delete(type='tel' placeholder='+7-800-000-00-00')
-        button &Ucy;&dcy;&acy;&lcy;&icy;&tcy;&softcy;
+        input#number_input_delete.input(type='tel' placeholder='+7-800-000-00-00')
+        input.submit_input(type='submit' value='Удалить')
     aside.sales
       | &Acy;&kcy;&tscy;&icy;&yacy; &scy;&tcy;&ucy;&dcy;&iecy;&ncy;&chcy;&iecy;&scy;&kcy;&acy;&yacy; &scy;&rcy;&iecy;&dcy;&acy;
       br
-      a(href='./sales') &Pcy;&ocy;&dcy;&rcy;&ocy;&bcy;&ncy;&iecy;&iecy;...
+      a(href='/sales') &Pcy;&ocy;&dcy;&rcy;&ocy;&bcy;&ncy;&iecy;&iecy;...
 footer
   | Stay connected
   | copyright

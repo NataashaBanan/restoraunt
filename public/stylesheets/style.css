@@ -84,7 +84,7 @@ a{
   height: 85%;
 }
 
-.form input{
+.input{
   -webkit-appearance: none;
   border: none;
   border-bottom: 1px solid black;
@@ -97,21 +97,6 @@ a{
 
 input[type=date]::-webkit-calendar-picker-indicator{
   opacity: 0.5;
-}
-
-.form button{
-  height: 40px;
-  width: 50%;
-  margin: 20px 2% 0 48%;
-  background-color: gold;
-  border: 1px solid black;
-  border-radius: 5px;
-  font-size: 20px;
-}
-
-.form button:hover{
-  background-color: darkgoldenrod;
-  cursor: pointer;
 }
 
 .form label{
@@ -154,6 +139,21 @@ input[type=date]::-webkit-calendar-picker-indicator{
   margin-left: 5vw;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.submit_input{
+  height: 40px;
+  width: 50%;
+  margin: 20px 2% 0 48%;
+  background-color: gold;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.submit_input:hover{
+  background-color: darkgoldenrod;
+  cursor: pointer;
 }
 
 .sales{
