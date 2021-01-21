@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1 &Ncy;&iecy; &ucy;&dcy;&acy;&lcy;&ocy;&scy;&softcy; &ocy;&tcy;&mcy;&iecy;&ncy;&icy;&tcy;&softcy; &bcy;&rcy;&ocy;&ncy;&softcy;
+    |
+    if errors
+        ul
+            for error in errors
+                li!= error.msg
