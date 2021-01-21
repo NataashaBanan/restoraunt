@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+const { DateTime } = require("luxon");
 
 var Schema = mongoose.Schema;
 
@@ -11,7 +12,7 @@ var BookingSchema = new Schema({
 })
 
 BookingSchema.virtual('booking_time').get(function (){
-    return this.date_and_time;
+    return DateTime.fromJSDate(this.date_and_time).toISODate();
 })
 
 //Export model
